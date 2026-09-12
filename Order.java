@@ -1,0 +1,13 @@
+class Order{
+    static int totalOrders=0;
+    Order(){
+        totalOrders++;
+    }
+    public static void main(){
+        Order order1=new Order();
+        Order order2=new Order();
+        Order order3=new Order();
+        Order order4=new Order();
+        System.out.print("Total Orders : "+ Order.totalOrders);
+    }
+}
