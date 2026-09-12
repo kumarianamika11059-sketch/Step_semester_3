@@ -1,4 +1,3 @@
-import java.util.Scanner;
 class Student{
     String name;
     int marks;
