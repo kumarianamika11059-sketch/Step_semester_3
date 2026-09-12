@@ -1,16 +1,11 @@
 public class SortedArray {
-
-    static int[] mergeSortedArrays(int[] arr1, int[] arr2) {
-
-        int[] result = new int[arr1.length + arr2.length];
-
-        int i = 0;
-        int j = 0;
-        int k = 0;
-
+static int[] mergeSortedArrays(int[] arr1, int[] arr2) {
+    int[] result = new int[arr1.length + arr2.length];
+    int i = 0;
+    int j = 0;
+    int k = 0;
         while (i < arr1.length && j < arr2.length) {
-
-            if (arr1[i] < arr2[j]) {
+        if (arr1[i] < arr2[j]) {
                 result[k] = arr1[i];
                 i++;
             } 
@@ -18,32 +13,25 @@ public class SortedArray {
                 result[k] = arr2[j];
                 j++;
             }
-
-            k++;
+                 k++;
         }
-
-        while (i < arr1.length) {
+         while (i < arr1.length) {
             result[k] = arr1[i];
             i++;
             k++;
         }
-
-        while (j < arr2.length) {
+         while (j < arr2.length) {
             result[k] = arr2[j];
             j++;
             k++;
         }
-
-        return result;
+         return result;
     }
-
     public static void main(String[] args) {
 
         int[] arr1 = {1, 3, 5};
         int[] arr2 = {2, 4, 6};
-
         int[] result = mergeSortedArrays(arr1, arr2);
-
         for (int x : result) {
             System.out.print(x + " ");
         }
